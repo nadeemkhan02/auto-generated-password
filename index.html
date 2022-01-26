@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <div class="form-wrap">
+        <h1>Sign Up</h1>
+        <p>It's free & only take a minute</p>
+        <form>
+          <div class="form-group">
+            <label for="first name">First Name</label>
+            <input required type="text" name="firstName" id="first name" />
+          </div>
+          <div class="form-group">
+            <label for="last name">Last Name</label>
+            <input required type="text" name="lastName" id="last name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input required type="email" name="email" id="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="password">password</label>
+            <div class="passwordfield">
+              <input
+                required
+                id="newpassword"
+                type="password"
+                name="password"
+                id="password"
+              />
+              <div class="img">
+                <img
+                  id="shownewpasswordicon"
+                  onclick="handleTogglePassword()"
+                  src="./assets/visibility.png"
+                  alt=""
+                  width="25px"
+                  height="25px"
+                />
+                <img
+                  id="hiddennewpasswordicon"
+                  onclick="handleTogglePassword()"
+                  src="./assets/hidden.png"
+                  alt=""
+                  width="25px"
+                  height="25px"
+                />
+              </div>
+            </div>
+          </div>
+          <small onclick="handleGeneratePassword()" class="password-btn"
+            >Generate Password</small
+          >
+          <div class="form-group">
+            <label for="password2">Confirm password</label>
+            <div class="passwordfield">
+              <input
+                required
+                id="confirmpassword"
+                type="password"
+                name="password"
+                id="password2"
+              />
+              <div class="img2">
+                <img
+                  id="showconfirmpasswordicon"
+                  onclick="handleToggleConfirmPassword()"
+                  src="./assets/visibility.png"
+                  alt=""
+                  width="25px"
+                  height="25px"
+                />
+                <img
+                  id="hiddenconfirmpasswordicon"
+                  onclick="handleToggleConfirmPassword()"
+                  src="./assets/hidden.png"
+                  alt=""
+                  width="25px"
+                  height="25px"
+                />
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn">Sign Up</button>
+          <p class="bottom-text">
+            By clicking the Sign Up button, you agree to our
+            <a href="#">Term & Conditions</a> and
+            <a href="#">Privacy Policy</a>
+          </p>
+        </form>
+      </div>
+      <footer>
+        <p>Already have an account <a href="#">Login Here</a></p>
+      </footer>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
